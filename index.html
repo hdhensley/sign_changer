@@ -22,8 +22,15 @@
 					<textarea name="textarea" id="textarea"></textarea>
 				</div>
 				<div data-role="fieldcontain">
-				<button>Show Result</button>
+					<button data-theme="a" onclick="showResults(); return false">Show Result</button>
 				</div>
+				<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+					<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count ui-corner-top"><span class="letter">A <span class="counter ui-li-count ui-btn-up-c ui-btn-corner-all">12</span></li>
+					<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count">B <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span></li>
+					<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count">C <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">4</span></li>
+					<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count">D <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">328</span></li>
+					<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count ui-corner-bottom ui-li-last">Trash <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">62</span></li>
+				</ul>
 	        </div><!-- /content -->
 	 
 	        <div data-role="footer" data-theme="a" data-position="fixed">
@@ -33,5 +40,6 @@
 	    </div><!-- /page -->	
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.mobile.min.js"></script>
+		<script src="js/sign_changer.js"></script>
 	</body>
 </html>

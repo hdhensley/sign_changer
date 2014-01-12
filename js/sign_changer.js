@@ -1,21 +1,17 @@
-
-$('body').bind('pageinit', function(event)
+function show_results()
 {
-	$('body').on('vclick','#results_button',function()
-	{
-		alert('Button clicked');
-		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
-		var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
+	alert('Button clicked');
+	var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
+	var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
+
+	var results = get_results(current_message_arr,new_message_arr);
 	
-		var results = get_results(current_message_arr,new_message_arr);
-		
-		results = object_sort(results);
-		
-		clear_results();
-		
-		display(results);
-	});
-});
+	results = object_sort(results);
+	
+	clear_results();
+	
+	display(results);
+}
 
 function clear_results()
 {

@@ -1,29 +1,23 @@
 function show_results()
 {
 	alert('Button clicked');
-	var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
-	var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
-
-	var results = get_results(current_message_arr,new_message_arr);
-	
-	results = object_sort(results);
-	
-	clear_results();
-	
-	display(results);
 }
 
 function clear_results()
 {
-	$("#result_row").empty();
+	$("#count-list").empty();
+}
+
+function createrow(letter,count){
+	return 	'<li class="ui-li ui-li-static ui-btn-up-c ui-li-has-count ui-corner-top"><span class="letter">' + letter + 
+			' <span class="counter ui-li-count ui-btn-up-c ui-btn-corner-all">' + count + '</span></li>';
 }
 
 function display(results)
 {
 	$.each(results,function(letter,amount)
 	{
-		$('#result_row').append(letter + " : " + amount);
-		$('#result_row').append('<br />');
+		$('#count-list').append(createrow(letter,amount));
 	})
 }
 

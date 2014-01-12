@@ -1,13 +1,19 @@
 $(document).on("pageinit","#pageone",function()
 {
-	$('#show-results-button').bind('click', function(event) {
-		alert('Button Clicked');
+	$('#show-results-button').bind('click', function(event) 
+	{
+		var current_message = $('#current-message').val();
+		var new_message     = $('#new-message').val();
+		show_results(current_message,new_message);
 	});
 });
 
-function show_results()
+function show_results(current_message,new_message)
 {
-	alert('Button clicked');
+	clear_results();
+	var results = get_results(current_message,new_message);
+	results = object_sort(results);
+	display(results);
 }
 
 function clear_results()

@@ -2,8 +2,8 @@ $(document).on("pageinit","#pageone",function()
 {
 	$('#show-results-button').bind('click', function(event) 
 	{
-		var current_message = $('#current-message').val();
-		var new_message     = $('#new-message').val();
+		var current_message = $('#current-message').val().replace(' ','').toUpperCase().split('');
+		var new_message     = $('#new-message').val().replace(' ','').toUpperCase().split('');
 		show_results(current_message,new_message);
 	});
 });

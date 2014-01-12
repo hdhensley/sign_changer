@@ -1,5 +1,22 @@
 $(document).ready(function()
 {
+	alert('DR JQuery is working!');
+
+	// $('#results_button').on('click tap',function(){
+	// 	var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
+	// 	var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
+	
+	// 	var results = get_results(current_message_arr,new_message_arr);
+		
+	// 	results = object_sort(results);
+		
+	// 	clear_results();
+		
+	// 	display(results);
+	// });
+})
+
+$('body').bind('pageinit', function(event) {
 	alert('JQuery is working!');
 
 	$('#results_button').on('click tap',function(){
@@ -14,7 +31,7 @@ $(document).ready(function()
 		
 		display(results);
 	});
-})
+});
 
 function clear_results()
 {

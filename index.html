@@ -3,24 +3,14 @@
 	<head>
 		<title>Sign Changer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="http://sign_changer.overzealouspelican.com/css/sign_changer.css" rel="stylesheet" />
 		<meta name="description" content="Quickly Determine What Letters You Need To Change Your Slide In Letter Sign!"> 
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-		<meta name="keywords" content="sign letters,church signs,plastic letters,signboard,sign board">
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js" ></script>
-		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="http://sign_changer.overzealouspelican.com/js/sign_changer.js"></script>
-		<script>
-			function onLoad(){
-          		document.addEventListener("deviceready", onDeviceReady, true);
-			}
-			function onDeviceReady(){
-				navigator.notification.alert("PhoneGap is working!!");
-			}
-		</script>
+		<meta name="keywords" content="sign letters,church signs,plastic letters,signboard,sign board">		
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+		<link rel="stylesheet" href="css/sign_changer.css" />
 	</head>
-	<body onload="onLoad();">
+	<body>
 		<div class="container">
 			<div class="row" id="header-row">
 				<h2 class="col-xs-12">Sign Changer</h2>
@@ -31,13 +21,13 @@
 						<h4 class="textarea-label">What The Sign Says</h4>
 					</div>
 					<div class="row">
-						<textarea id="current_message" class="col-xs-12" rows="10"></textarea>
+						<textarea id="current_message" class="col-xs-12" rows="5"></textarea>
 					</div>
 					<div class="row">
 						<h4 class="textarea-label">What The Sign Should Say</h4>
 					</div>
 					<div class="row">
-						<textarea id="new_message" class="col-xs-12" rows="10"></textarea>
+						<textarea id="new_message" class="col-xs-12" rows="5"></textarea>
 					</div>
 					<div class="row">
 						<h4 class="textarea-label"><button id="results_button" class="btn btn-primary">Show Results</button></h4>
@@ -49,5 +39,9 @@
 				Copyright &copy; 2014 &bull; <a href="http://overzealouspelican.com">OZP Development</a>
 			</footer>
 		</div>		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/sign_changer.js"></script>
 	</body>
 </html>

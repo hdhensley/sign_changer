@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Sign Changer</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Quickly Determine What Letters You Need To Change Your Slide In Letter Sign!"> 
-		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-		<meta name="keywords" content="sign letters,church signs,plastic letters,signboard,sign board">		
+	<head>		
+		<title>Sign Changer</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
 		<link rel="stylesheet" href="css/sign_changer.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="row" id="header-row">
-				<h2 class="col-xs-12">Sign Changer</h2>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
+		<div data-role="page">
+	 
+	        <div data-role="header">
+	            <h1>Sign Changer</h1>
+	        </div><!-- /header -->
+	 
+	        <div data-role="content">
+	            <div class="col-xs-12">
 					<div class="row">
 						<h4 class="textarea-label">What The Sign Says</h4>
 					</div>
@@ -34,11 +33,13 @@
 					</div>
 					<div id="result_row" class="row"></div>
 				</div>
-			</div>
-			<footer>
-				Copyright &copy; 2014 &bull; <a href="http://overzealouspelican.com">OZP Development</a>
-			</footer>
-		</div>		
+	        </div><!-- /content -->
+	 
+	        <div data-role="footer">
+	            <h4>Copyright &copy; 2014 &bull; <a href="http://overzealouspelican.com">OZP Development</a></h4>
+	        </div><!-- /footer -->
+	 
+	    </div><!-- /page -->	
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.mobile-1.0rc1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

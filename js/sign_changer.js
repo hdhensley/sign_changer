@@ -1,4 +1,4 @@
-$(on('pageinit', function(event)
+$(document).on('pageinit', function(event)
 {
 	$('#results_button').vclick(function(){
 		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');

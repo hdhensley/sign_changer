@@ -1,8 +1,11 @@
 
 $('body').bind('pageinit', function(event)
 {
-	$('#results_button').on('click tap',function()
+	alert('JQuery Is Working');
+
+	$('#results_button').on('tap',function()
 	{
+		alert('Button clicked');
 		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
 		var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
 	

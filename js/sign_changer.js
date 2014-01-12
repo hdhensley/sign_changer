@@ -1,9 +1,7 @@
 
 $('body').bind('pageinit', function(event)
 {
-	alert('JQuery Is Working');
-
-	$('#results_button').on('tap',function()
+	$('body').on('vclick','#results_button',function()
 	{
 		alert('Button clicked');
 		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');

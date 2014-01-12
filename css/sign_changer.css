@@ -1,0 +1,29 @@
+body{
+	text-align : center;
+	background-image : url('../img/old_moon.png');
+}
+
+#result_row{
+	background-color : #fff;
+	min-height : 200px;
+	border : thin solid #aaa;
+	text-align:left;
+}
+
+footer{
+	padding : 5px;
+}
+
+#header-row,footer{
+	background-color:#AABEF4;
+	margin-top : 5px;
+	border-radius : 25px;
+}
+
+#header-row h2{
+	margin-bottom : 20px;
+}
+
+#adsense-container{
+	padding-top : 30px;
+}

@@ -1,3 +1,10 @@
+$(document).on("pageinit","#pageone",function()
+{
+	$('#show-results-button').bind('click', function(event) {
+		alert('Button Clicked');
+	});
+});
+
 function show_results()
 {
 	alert('Button clicked');

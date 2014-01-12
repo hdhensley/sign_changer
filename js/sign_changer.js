@@ -1,6 +1,6 @@
 $(document).on('pageinit', function(event)
 {
-	$('#results_button').vclick(function(){
+	$('#results_button').on('click tap',function(){
 		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
 		var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
 	

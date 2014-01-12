@@ -1,4 +1,4 @@
-$(document).on('pageinit', function(event)
+$(document).ready(function()
 {
 	alert('JQuery is working!');
 

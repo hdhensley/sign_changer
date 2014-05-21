@@ -1,8 +1,8 @@
 $(function()
 {
 	$('#results_button').click(function(){
-		var current_message_arr = $('#current_message').val().replace(' ','').toLowerCase().split('');
-		var new_message_arr     = $('#new_message').val().replace(' ','').toLowerCase().split('');
+		var current_message_arr = $('#current_message').val().replace(' ','').toUpperCase().split('');
+		var new_message_arr     = $('#new_message').val().replace(' ','').toUpperCase().split('');
 	
 		var results = get_results(current_message_arr,new_message_arr);
 		
@@ -16,15 +16,18 @@ $(function()
 
 function clear_results()
 {
-	$("#result_row").empty();
+	$(".results-list").empty();
 }
 
 function display(results)
 {
 	$.each(results,function(letter,amount)
 	{
-		$('#result_row').append(letter + " : " + amount);
-		$('#result_row').append('<br />');
+		if( amount > 0 ){
+			$('#letters-needed').append('<li>' + letter + ' : ' + amount + '</li>');
+		} else {
+			$('#letters-unused').append('<li>' + letter + ' : ' + (amount * -1) + '</li>');
+		}
 	})
 }
 

@@ -12,38 +12,31 @@
 	<body>
 		<div class="container">
 			<div class="row" id="header-row">
-				<h2 class="col-xs-12">Sign Changer</h2>
+				<h2 class="col-xs-12">OZP Sign Changer</h2>
 			</div>
 			<div class="row">
-				<div class="col-xs-9">
-					<div class="row">
-						<h4 class="textarea-label">What The Sign Says</h4>
-					</div>
-					<div class="row">
-						<textarea id="current_message" class="col-xs-12" rows="10"></textarea>
-					</div>
-					<div class="row">
-						<h4 class="textarea-label">What The Sign Should Say</h4>
-					</div>
-					<div class="row">
-						<textarea id="new_message" class="col-xs-12" rows="10"></textarea>
-					</div>
-					<div class="row">
-						<h4 class="textarea-label"><button id="results_button" class="btn btn-primary">Show Results</button></h4>
-					</div>
-					<div id="result_row" class="row"></div>
+				<div class="col-xs-12 col-md-6">
+					<h4 class="textarea-label">What The Sign Says</h4>
+					<textarea id="current_message" class="col-xs-12" rows="10"></textarea>
 				</div>
-				<div id="adsense-container" class="col-xs-3">
-					<p>If you found this tool useful, please consider donating! I thank you for your support!</p>
-					<div id="paypal_donation" class="row">
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-							<input type="hidden" name="cmd" value="_s-xclick">
-							<input type="hidden" name="hosted_button_id" value="EASCAH6XTVHBW">
-							<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						</form>
-						
-					</div>
+				<div class="col-xs-12 col-md-6">
+					<h4 class="textarea-label">What The Sign Should Say</h4>
+					<textarea id="new_message" class="col-xs-12" rows="10"></textarea>
+				</div>
+				<div class="col-xs-12">
+					<h4 class="textarea-label" id="results-button-container"><button id="results_button" class="btn btn-primary col-xs-12 col-md-6 col-md-offset-3">Show Results</button></h4>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<h4>Letters Needed</h4>
+					<ul class="results-list col-xs-12 well" id="letters-needed">
+						<li>Nothing yet</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<h4>Letters Left Over</h4>
+					<ul class="results-list col-xs-12 well" id="letters-unused">
+						<li>Nothing yet</li>
+					</ul>
 				</div>
 			</div>
 			<footer>

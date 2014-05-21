@@ -27,3 +27,12 @@ footer{
 #adsense-container{
 	padding-top : 30px;
 }
+
+#results_button{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.results-list{
+	list-style-type : none;
+}

@@ -1,4 +1,4 @@
-$(function()
+$(document).on("pageinit","#pageone",function()
 {
 	$('#results_button').click(function(){
 		var current_message_arr = $('#current_message').val().replace(' ','').toUpperCase().split('');
@@ -12,7 +12,15 @@ $(function()
 		
 		display(results);
 	});
-})
+});
+
+function show_results(current_message,new_message)
+{
+	clear_results();
+	var results = get_results(current_message,new_message);
+	results = object_sort(results);
+	display(results);
+}
 
 function clear_results()
 {

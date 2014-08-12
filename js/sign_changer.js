@@ -1,18 +1,11 @@
-$(document).on("pageinit","#pageone",function()
-{
-	$('#results_button').click(function(){
+$(function(){
+	$('.message-field').keyup(function(){
 		var current_message_arr = $('#current_message').val().replace(' ','').toUpperCase().split('');
 		var new_message_arr     = $('#new_message').val().replace(' ','').toUpperCase().split('');
-	
-		var results = get_results(current_message_arr,new_message_arr);
 		
-		results = object_sort(results);
-		
-		clear_results();
-		
-		display(results);
-	});
-});
+		show_results(current_message_arr,new_message_arr);
+	})
+})
 
 function show_results(current_message,new_message)
 {

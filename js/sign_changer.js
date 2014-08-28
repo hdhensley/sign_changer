@@ -24,10 +24,12 @@ function display(results)
 {
 	$.each(results,function(letter,amount)
 	{
-		if( amount > 0 ){
-			$('#letters-needed').append('<li>' + letter + ' : ' + amount + '</li>');
-		} else {
-			$('#letters-unused').append('<li>' + letter + ' : ' + (amount * -1) + '</li>');
+		if( letter != ' ' ){
+			if( amount > 0 ){
+				$('#letters-needed').append('<li>' + letter + ' : ' + amount + '</li>');
+			} else {
+				$('#letters-unused').append('<li>' + letter + ' : ' + (amount * -1) + '</li>');
+			}
 		}
 	})
 }

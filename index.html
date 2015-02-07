@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="signChangerApp">
 	<head>		
 		<title>Sign Changer</title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
@@ -8,29 +8,29 @@
 		<link rel="stylesheet" href="css/sign_changer.css" />
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" ng-controller="signChangerController">
 			<div class="col-xs-12" id="header-row">
 				<h2 class="col-xs-12">Sign Changer by Overzealous Pelican</h2>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
 					<h4 class="textarea-label">What The Sign Says</h4>
-					<textarea id="current_message" class="col-xs-12 message-field" rows="10"></textarea>
+					<textarea id="current_message" ng-change="update()" ng-model="currentMessage" class="col-xs-12 message-field" rows="10"></textarea>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<h4 class="textarea-label">What The Sign Should Say</h4>
-					<textarea id="new_message" class="col-xs-12 message-field" rows="10"></textarea>
+					<textarea id="new_message" ng-change="update()" ng-model="newMessage" class="col-xs-12 message-field" rows="10"></textarea>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<h4>Letters Needed</h4>
 					<ul class="results-list col-xs-12 well" id="letters-needed">
-						<li>Nothing yet</li>
+						<li ng-repeat="letter in lettersNeeded">{{ letter.letter }} : {{ letter.amount }}</li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<h4>Letters Left Over</h4>
 					<ul class="results-list col-xs-12 well" id="letters-unused">
-						<li>Nothing yet</li>
+						<li ng-repeat="letter in lettersRemaining">{{ letter.letter }} : {{ letter.amount }}</li>
 					</ul>
 				</div>
 	        </div><!-- /content -->
@@ -40,9 +40,8 @@
 	        </div><!-- /footer -->
 	 
 	    </div><!-- /page -->	
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<script src="/js/sign_changer.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+	    <script src="js/signChangerController.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
